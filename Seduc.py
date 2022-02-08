@@ -1,0 +1,22 @@
+resposta = str(input('\033[1;35mBEM-VINDO AO SISTEMA DE BOLETIM ON-LINE DA SEDUC PRESSIONE A TECLA "S" PARA CONTINUAR:\033[m ').strip().lower())
+while resposta == 's':
+    print('\033[1;31m-=-\033[m' * 20)
+    print('\033[1;34m                    BOLETIM ON-LINE SEDUC\033[m')
+    print('\033[1;31m-=-\033[m' * 20)
+    print('\033[1;34mNOTA MÉDIA 5.0')
+    print('MÉDIA ANUAL MIN 50.0\033[m')
+    materia = str(input('\033[1;34mINFORME A DISCIPLINA:\033[m ').strip().upper())
+    n1 = float(input('\033[1;33m1°Av:\033[m ').strip())
+    n2 = float(input('\033[1;33m2° Av:\033[m ').strip())
+    n3 = float(input('\033[1;33m3° Av:\033[m ').strip())
+    n4 = float(input('\033[1;33m4° Av:\033[m \033[m').strip())
+    media = (n1 * 2) + (n2 * 3)  + (n3 * 2) + (n4 * 3)
+    if (media >= 50 ):
+        print('\033[1;34mDISCIPLINA: {}\033[m'.format(materia))
+        print('\033[1;34mA media é {}\033[m'.format(media))
+        print('\033[1;34mSTATUS:\033[m\033[1;32m APROVADO\033[m')
+    else:
+        print('\033[1;34mDISCIPLINA: {}\033[m'.format(materia))
+        print('\033[1;34mA media é {}\033[m'.format(media))
+        print('\033[1;34mSTATUS:\033[m\033[1;31m REPROVADO\033[m')
+    resposta = str(input('\033[1;35mBOLETIM ON-LINE DA SEDUC PRESSIONE A TECLA "S" PARA REPETIR:\033[m ').strip().lower())
